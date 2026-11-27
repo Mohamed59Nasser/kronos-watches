@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>كل الساعات — كرونوس</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <div class="grp"><span>المعرض: شارع النيل، المهندسين، الجيزة</span><span>مفتوح يوميًا 12 ظهرًا – 10 مساءً</span></div>
+    <div class="grp"><span>واتساب: 01X XXXX XXXX</span></div>
+  </div>
+</div>
+
+<header class="site">
+  <div class="wrap header-inner">
+    <a class="brand-col" href="index.html"><span class="wordmark">كرونوس<small>KRONOS · CAIRO</small></span></a>
+    <nav class="main">
+      <a href="index.html">الرئيسية</a>
+      <a href="collection.html" class="active">الساعات</a>
+      <a href="index.html#appt">احجز معاينة</a>
+      <a href="index.html#mag">المجلة</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn theme-toggle" title="الوضع الليلي">☾</button>
+      <a class="icon-btn cart-link" href="#" aria-label="سلة التسوق">&#128717;<span class="cart-count">0</span></a>
+      <a class="login-link" href="login.html">تسجيل الدخول</a>
+    </div>
+  </div>
+</header>
+
+<div class="page-head">
+  <div class="wrap">
+    <h1>كل الساعات</h1>
+    <p>تشكيلة المعرض كاملة: قطع جديدة ومستعملة بحالة ممتازة، كلها بشهادة أصلية وضمان سنتين.</p>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="chips">
+    <button class="chip on" data-brand="الكل">الكل</button>
+    <button class="chip" data-brand="أوميغا">أوميغا</button>
+    <button class="chip" data-brand="رولكس">رولكس</button>
+    <button class="chip" data-brand="لونجين">لونجين</button>
+    <button class="chip" data-brand="تيسو">تيسو</button>
+    <button class="chip" data-brand="كارتييه">كارتييه</button>
+    <button class="chip" data-brand="تيودور">تيودور</button>
+    <button class="chip" data-brand="سيكو">سيكو</button>
+  </div>
+
+  <div class="coll">
+    <aside class="filters">
+      <div class="f-group">
+        <h5>الحركة</h5>
+        <label><input type="checkbox" data-filter="movement" value="أوتوماتيك"> أوتوماتيك</label>
+        <label><input type="checkbox" data-filter="movement" value="يدوي"> يدوي</label>
+        <label><input type="checkbox" data-filter="movement" value="كوارتز"> كوارتز</label>
+      </div>
+      <div class="f-group">
+        <h5>السعر</h5>
+        <label><input type="checkbox" data-filter="price" value="100000"> أقل من 100 ألف</label>
+        <label><input type="checkbox" data-filter="price" value="250000"> أقل من 250 ألف</label>
+        <label><input type="checkbox" data-filter="price" value="500000"> أقل من 500 ألف</label>
+      </div>
+      <div class="f-group">
+        <h5>مقاس العلبة</h5>
+        <label><input type="checkbox" data-filter="size" value="حتى 36 مم"> حتى 36 مم</label>
+        <label><input type="checkbox" data-filter="size" value="37 – 40 مم"> 37 – 40 مم</label>
+        <label><input type="checkbox" data-filter="size" value="أكبر من 40 مم"> أكبر من 40 مم</label>
+      </div>
+    </aside>
+
+    <div>
+      <div class="coll-meta">
+        <span class="coll-count">12 ساعة</span>
+        <span>الترتيب: الأحدث أولًا</span>
+      </div>
+      <div class="coll-grid"></div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <span class="wordmark">كرونوس</span>
+        <p style="color:var(--ink-soft);max-width:320px;margin-top:10px">متجر ساعات سويسرية أصلية في قلب المهندسين. كل قطعة عندنا مختارة بعناية ومفحوصة ومرفقة بشهادة ضمان.</p>
+      </div>
+      <div>
+        <h4>المتجر</h4>
+        <ul><li><a href="collection.html">كل الساعات</a></li><li><a href="index.html#appt">حجز معاينة</a></li><li><a href="index.html#mag">المجلة</a></li><li><a href="login.html">حسابي</a></li></ul>
+      </div>
+      <div>
+        <h4>المعرض</h4>
+        <ul><li>شارع النيل، المهندسين، الجيزة</li><li>يوميًا 12 ظهرًا – 10 مساءً</li></ul>
+      </div>
+      <div>
+        <h4>تواصل معانا</h4>
+        <ul><li>واتساب: 01X XXXX XXXX</li><li>إنستجرام: @kronos.cairo</li></ul>
+      </div>
+    </div>
+    <div class="foot-note">
+      <span>© 2026 كرونوس — كل الحقوق محفوظة</span>
+      <span>الصور الحالية رسوم توضيحية، وصور المنتجات الفعلية تُضاف قريبًا</span>
+    </div>
+  </div>
+</footer>
+
+<script src="watch.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
