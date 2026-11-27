@@ -1,0 +1,238 @@
+/* كرونوس — watch store v1 */
+:root{
+  --paper:#F6F2E9;
+  --paper-2:#EFE9DB;
+  --card:#FBF8F1;
+  --ink:#171411;
+  --ink-soft:#4C473E;
+  --line:#C9C2B1;
+  --slot:#ECE6D6;
+  --dark:#1B1916;
+  --dark-2:#14120F;
+  --oxblood:#6E1423;
+  --paper-fixed:#F6F2E9;
+  --ink-fixed:#171411;
+}
+[data-theme="dark"]{
+  --paper:#12110F;
+  --paper-2:#191713;
+  --card:#1A1814;
+  --ink:#EDE7D8;
+  --ink-soft:#A79F8E;
+  --line:#37332C;
+  --slot:#1C1A15;
+  --dark:#1B1916;
+  --oxblood:#C75C6E;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{direction:rtl}
+body{
+  font-family:"IBM Plex Sans Arabic",Tahoma,Arial,sans-serif;
+  background:var(--paper);color:var(--ink);
+  font-size:16px;line-height:1.7;
+  transition:background .25s,color .25s;
+}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1320px;margin:0 auto;padding:0 32px}
+.serif{font-family:"Amiri",serif}
+
+/* ---------- top strip ---------- */
+.topbar{border-bottom:1px solid var(--line);font-size:13px;color:var(--ink-soft)}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:8px;padding-bottom:8px;gap:10px}
+.topbar .grp{display:flex;gap:22px;white-space:nowrap}
+
+/* ---------- header ---------- */
+header.site{border-bottom:1px solid var(--line);background:var(--paper);position:sticky;top:0;z-index:50}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:14px}
+.brand-col{display:flex;flex-direction:column;line-height:1.1}
+.wordmark{font-family:"Amiri",serif;font-size:32px;letter-spacing:2px;font-weight:700}
+.wordmark small{font-family:"IBM Plex Sans Arabic";font-size:10px;letter-spacing:6px;color:var(--ink-soft)}
+nav.main{display:flex;gap:26px;font-size:15px}
+nav.main a{padding:6px 2px;border-bottom:2px solid transparent;white-space:nowrap}
+nav.main a:hover,nav.main a.active{border-bottom-color:var(--ink)}
+.header-actions{display:flex;gap:10px;font-size:14px;align-items:center}
+.icon-btn{border:1px solid var(--line);background:transparent;color:var(--ink);width:38px;height:38px;border-radius:50%;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;font-family:inherit}
+.icon-btn:hover{background:var(--paper-2)}
+.cart-link{position:relative}
+.cart-count{position:absolute;top:-6px;left:-6px;background:var(--oxblood);color:#fff;font-size:11px;min-width:18px;height:18px;border-radius:9px;display:flex;align-items:center;justify-content:center;padding:0 4px}
+.login-link{border:1px solid var(--ink);padding:7px 16px;border-radius:2px;white-space:nowrap}
+.login-link:hover{background:var(--ink);color:var(--paper)}
+
+/* ---------- watch slots ---------- */
+.watch-slot{background:var(--slot);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.watch-slot svg{height:86%;width:auto;max-width:86%;filter:drop-shadow(0 16px 22px rgba(0,0,0,.28))}
+.watch-slot.tall svg{height:92%}
+
+/* ---------- hero ---------- */
+.hero{border-bottom:1px solid var(--line);background:var(--dark-2);color:var(--paper-fixed)}
+.hero-grid{display:grid;grid-template-columns:1.05fr 1fr;min-height:580px}
+.hero-copy{display:flex;flex-direction:column;justify-content:center;gap:24px;padding:60px 20px 60px 0}
+.hero-copy .kicker{font-size:13px;letter-spacing:4px;color:#B9B2A4}
+.hero-copy h1{font-family:"Amiri",serif;font-size:56px;line-height:1.3;font-weight:700}
+.hero-copy p{max-width:460px;color:#CFC8B9;font-size:17px}
+.hero-visual{display:flex;align-items:center;justify-content:center;padding:30px 0}
+.hero-visual svg{height:520px;max-width:90%;filter:drop-shadow(0 30px 40px rgba(0,0,0,.5))}
+.btn{display:inline-block;padding:13px 30px;border:1px solid var(--ink);font-size:15px;cursor:pointer;background:transparent;color:var(--ink);font-family:inherit;text-align:center}
+.btn.solid{background:var(--ink);color:var(--paper)}
+.btn:hover{opacity:.85}
+.btn.light{border-color:var(--paper-fixed);color:var(--paper-fixed)}
+.btn.solid-light{background:var(--paper-fixed);color:var(--ink-fixed);border-color:var(--paper-fixed)}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+
+/* ---------- trust strip ---------- */
+.trust{border-bottom:1px solid var(--line);background:var(--paper-2)}
+.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.trust div{padding:18px 10px;text-align:center;font-size:13px;color:var(--ink-soft);border-inline-start:1px solid var(--line)}
+.trust div:first-child{border-inline-start:none}
+.trust b{display:block;font-size:15px;color:var(--ink);margin-bottom:2px}
+
+/* ---------- sections ---------- */
+section.block{padding:70px 0}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;border-top:2px solid var(--ink);padding-top:18px;margin-bottom:38px;gap:12px}
+.sec-head h2{font-family:"Amiri",serif;font-size:36px;font-weight:700}
+.sec-head a{font-size:14px;border-bottom:1px solid var(--ink);white-space:nowrap}
+
+/* ---------- tiles ---------- */
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.tile{position:relative;display:block}
+.tile .watch-slot{aspect-ratio:3/3.6}
+.tile .cap{position:absolute;bottom:18px;right:18px;background:var(--paper);color:var(--ink);padding:8px 18px;font-size:15px;border:1px solid var(--line)}
+
+/* ---------- product cards ---------- */
+.grid-products{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.card{background:var(--card);border:1px solid var(--line);display:flex;flex-direction:column;transition:transform .15s}
+.card:hover{transform:translateY(-3px)}
+.card .watch-slot{aspect-ratio:1/1.1;border-bottom:1px solid var(--line)}
+.card .body{padding:16px 18px 20px;display:flex;flex-direction:column;gap:3px;flex:1}
+.card .brand{font-size:11px;letter-spacing:2.5px;color:var(--ink-soft)}
+.card .model{font-family:"Amiri",serif;font-size:20px;font-weight:700}
+.card .ref{font-size:12px;color:var(--ink-soft)}
+.card .price{margin-top:auto;padding-top:10px;font-size:17px;font-weight:600}
+.tag{display:inline-block;font-size:12px;border:1px solid var(--oxblood);color:var(--oxblood);padding:2px 10px;border-radius:20px;width:fit-content;margin-bottom:6px}
+
+/* ---------- appointment ---------- */
+.appt{background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.appt-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.appt h2{font-family:"Amiri",serif;font-size:36px;font-weight:700;margin-bottom:10px}
+.appt p{color:var(--ink-soft);max-width:440px}
+.appt form{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.appt .full{grid-column:1/-1}
+.field label{display:block;font-size:14px;margin-bottom:6px}
+.field input,.field select{width:100%;padding:12px 14px;border:1px solid var(--line);background:var(--card);color:var(--ink);font-family:inherit;font-size:15px}
+.field input:focus,.field select:focus{outline:1px solid var(--ink)}
+.form-msg{grid-column:1/-1;font-size:15px;color:var(--oxblood);min-height:24px}
+
+/* ---------- magazine ---------- */
+.mag{background:var(--dark-2);color:var(--paper-fixed)}
+.mag .sec-head{border-top-color:var(--paper-fixed)}
+.mag .sec-head a{border-bottom-color:var(--paper-fixed)}
+.mag-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:24px}
+.mag-card .watch-slot{aspect-ratio:16/9;margin-bottom:14px;background:#232019}
+.mag-card .watch-slot svg{height:150%}
+.mag-card h3{font-family:"Amiri",serif;font-size:22px;font-weight:700;line-height:1.45}
+.mag-card .cat{font-size:12px;letter-spacing:2px;color:#B9B2A4;margin-bottom:6px}
+
+/* ---------- footer ---------- */
+footer{border-top:2px solid var(--ink);padding:50px 0 30px;background:var(--paper)}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:30px;margin-bottom:40px}
+.foot-grid h4{font-size:13px;letter-spacing:2px;margin-bottom:14px;color:var(--ink-soft);font-weight:600}
+.foot-grid ul{list-style:none;font-size:15px;display:flex;flex-direction:column;gap:8px}
+.foot-note{border-top:1px solid var(--line);padding-top:18px;font-size:13px;color:var(--ink-soft);display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+
+/* ---------- collection ---------- */
+.page-head{padding:46px 0 26px;border-bottom:1px solid var(--line)}
+.page-head h1{font-family:"Amiri",serif;font-size:44px;font-weight:700}
+.page-head p{color:var(--ink-soft);max-width:560px}
+.chips{display:flex;gap:10px;flex-wrap:wrap;padding:18px 0;border-bottom:1px solid var(--line)}
+.chip{border:1px solid var(--line);background:var(--card);color:var(--ink);padding:6px 16px;font-size:14px;border-radius:20px;cursor:pointer;font-family:inherit}
+.chip.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.coll{display:grid;grid-template-columns:250px 1fr;gap:40px;padding:36px 0 80px}
+.filters{border-inline-end:1px solid var(--line);padding-inline-end:30px}
+.f-group{margin-bottom:28px}
+.f-group h5{font-size:13px;letter-spacing:2px;color:var(--ink-soft);margin-bottom:10px;font-weight:600}
+.f-group label{display:flex;gap:8px;align-items:center;font-size:15px;padding:3px 0;cursor:pointer}
+.f-group input{accent-color:var(--ink)}
+.coll-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.coll-meta{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px;font-size:14px;color:var(--ink-soft)}
+.empty-msg{grid-column:1/-1;text-align:center;color:var(--ink-soft);padding:60px 0;font-size:17px}
+
+/* ---------- product page ---------- */
+.crumbs{font-size:13px;color:var(--ink-soft);padding:22px 0}
+.crumbs a{border-bottom:1px solid var(--line)}
+.pd{display:grid;grid-template-columns:1.1fr 1fr;gap:50px;padding-bottom:40px}
+.pd-photos{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.pd-photos .watch-slot{aspect-ratio:1/1}
+.pd-photos .big{grid-column:1/-1;aspect-ratio:16/11}
+.pd-info h1{font-family:"Amiri",serif;font-size:38px;font-weight:700;line-height:1.35}
+.pd-info .brand-line{font-size:13px;letter-spacing:3px;color:var(--ink-soft);margin-bottom:6px}
+.pd-price{font-size:26px;font-weight:600;margin:16px 0 4px}
+.pd-price s{color:var(--ink-soft);font-size:17px;font-weight:400;margin-inline-start:12px}
+.pd-stock{font-size:14px;color:var(--ink-soft)}
+.spec{border-top:1px solid var(--line);margin:22px 0}
+.spec div{display:flex;justify-content:space-between;gap:10px;padding:11px 2px;border-bottom:1px solid var(--line);font-size:15px}
+.spec div span:first-child{color:var(--ink-soft)}
+.pd-btns{display:flex;flex-direction:column;gap:12px;margin:22px 0}
+.note-box{border:1px solid var(--line);background:var(--card);padding:16px 20px;font-size:14px;color:var(--ink-soft)}
+.note-box b{display:block;font-size:15px;color:var(--ink);margin-bottom:2px}
+.wa{font-size:15px;border-bottom:1px solid var(--ink);width:fit-content;margin-top:16px;display:inline-block}
+
+/* ---------- login ---------- */
+.login-wrap{display:grid;grid-template-columns:1fr 1fr;min-height:640px}
+.login-photo{background:var(--dark-2);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.login-photo svg{height:78%;max-width:80%;filter:drop-shadow(0 30px 40px rgba(0,0,0,.5))}
+.login-photo .quote{position:absolute;bottom:34px;right:34px;left:34px;color:var(--paper-fixed);font-family:"Amiri",serif;font-size:22px;line-height:1.6}
+.login-form{display:flex;align-items:center;justify-content:center;padding:60px 40px}
+.login-box{width:100%;max-width:420px}
+.login-box h1{font-family:"Amiri",serif;font-size:36px;font-weight:700;margin-bottom:6px}
+.login-box .sub{color:var(--ink-soft);margin-bottom:28px;font-size:15px}
+.login-box .btn{width:100%}
+.alt{display:flex;gap:12px;margin:18px 0}
+.alt .btn{flex:1;font-size:14px;padding:11px}
+.divider{display:flex;align-items:center;gap:14px;color:var(--ink-soft);font-size:13px;margin:22px 0}
+.divider::before,.divider::after{content:"";flex:1;height:1px;background:var(--line)}
+.perks{margin-top:30px;border-top:1px solid var(--line);padding-top:18px;font-size:14px;color:var(--ink-soft);display:flex;flex-direction:column;gap:8px}
+.perks span::before{content:"—";margin-inline-end:8px}
+.small-link{font-size:14px;margin-top:16px;text-align:center}
+.small-link a{border-bottom:1px solid var(--ink)}
+
+/* ---------- responsive ---------- */
+@media (max-width:1080px){
+  .grid-products{grid-template-columns:repeat(3,1fr)}
+  .coll-grid{grid-template-columns:repeat(2,1fr)}
+  .hero-copy h1{font-size:44px}
+  .hero-visual svg{height:420px}
+}
+@media (max-width:900px){
+  nav.main{display:none}
+  .hero-grid,.login-wrap,.pd,.appt-grid{grid-template-columns:1fr}
+  .hero-visual{order:-1;padding:24px 0 0}
+  .hero-visual svg{height:340px}
+  .hero-copy{padding:20px 0 50px}
+  .tiles{grid-template-columns:1fr;gap:16px}
+  .mag-grid{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .coll{grid-template-columns:1fr}
+  .filters{border:none;padding:0 0 10px;border-bottom:1px solid var(--line)}
+  .filters .f-group{display:inline-block;vertical-align:top;width:48%;margin-bottom:14px}
+  .login-photo{min-height:340px}
+  .login-photo svg{height:300px}
+  .pd-photos .big{aspect-ratio:16/10}
+}
+@media (max-width:620px){
+  .wrap{padding:0 18px}
+  .grid-products,.coll-grid{grid-template-columns:repeat(2,1fr);gap:14px}
+  .topbar .grp:last-child{display:none}
+  .hero-copy h1{font-size:34px}
+  .sec-head h2{font-size:28px}
+  .card .body{padding:12px 12px 16px}
+  .card .model{font-size:17px}
+  .card .price{font-size:15px}
+  .trust .wrap{grid-template-columns:repeat(2,1fr)}
+  .trust div{border:none;border-top:1px solid var(--line)}
+  .trust div:nth-child(-n+2){border-top:none}
+  .appt form{grid-template-columns:1fr}
+  .pd-photos{grid-template-columns:1fr 1fr;gap:10px}
+  .pd-info h1{font-size:30px}
+  .foot-grid{grid-template-columns:1fr}
+  .wordmark{font-size:26px}
+}
