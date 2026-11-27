@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>المنتج — كرونوس</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <div class="grp"><span>المعرض: شارع النيل، المهندسين، الجيزة</span><span>مفتوح يوميًا 12 ظهرًا – 10 مساءً</span></div>
+    <div class="grp"><span>واتساب: 01X XXXX XXXX</span></div>
+  </div>
+</div>
+
+<header class="site">
+  <div class="wrap header-inner">
+    <a class="brand-col" href="index.html"><span class="wordmark">كرونوس<small>KRONOS · CAIRO</small></span></a>
+    <nav class="main">
+      <a href="index.html">الرئيسية</a>
+      <a href="collection.html" class="active">الساعات</a>
+      <a href="index.html#appt">احجز معاينة</a>
+      <a href="index.html#mag">المجلة</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn theme-toggle" title="الوضع الليلي">☾</button>
+      <a class="icon-btn cart-link" href="#" aria-label="سلة التسوق">&#128717;<span class="cart-count">0</span></a>
+      <a class="login-link" href="login.html">تسجيل الدخول</a>
+    </div>
+  </div>
+</header>
+
+<div class="wrap" data-product-page>
+  <div class="crumbs"><a href="index.html">الرئيسية</a> / <a href="collection.html">الساعات</a> / <span data-p-model>الساعة</span></div>
+
+  <div class="pd">
+    <div class="pd-photos">
+      <span class="watch-slot big" data-p-photo></span>
+      <span class="watch-slot" data-p-photo></span>
+      <span class="watch-slot" data-p-photo></span>
+      <span class="watch-slot" data-p-photo></span>
+      <span class="watch-slot" data-p-photo></span>
+    </div>
+
+    <div class="pd-info">
+      <div class="brand-line" data-p-brand></div>
+      <h1 data-p-model></h1>
+      <div style="font-size:13px;color:var(--ink-soft)" data-p-ref></div>
+      <div class="pd-price" data-p-price></div>
+      <div class="pd-stock" data-p-cond></div>
+
+      <div class="spec"></div>
+
+      <p style="color:var(--ink-soft);font-size:15px" data-p-story></p>
+
+      <div class="pd-btns">
+        <button class="btn solid add-cart">أضف إلى السلة</button>
+        <a class="btn" href="index.html#appt">احجز معاينة في المعرض</a>
+      </div>
+
+      <div class="note-box">
+        <div>
+          <b>شهادة أصلية وضمان سنتين</b>
+          الساعة مفحوصة بالكامل ومرفقة بعلبتها وأوراقها، ومعاها ضمان سنتين على الماكينة من المعرض.
+        </div>
+      </div>
+
+      <a class="wa" href="#">عندك سؤال عن الساعة دي؟ كلّمنا واتساب</a>
+    </div>
+  </div>
+</div>
+
+<section class="block" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>ساعات مشابهة</h2>
+      <a href="collection.html">المجموعة كاملة</a>
+    </div>
+    <div class="grid-products" id="similar"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <span class="wordmark">كرونوس</span>
+        <p style="color:var(--ink-soft);max-width:320px;margin-top:10px">متجر ساعات سويسرية أصلية في قلب المهندسين. كل قطعة عندنا مختارة بعناية ومفحوصة ومرفقة بشهادة ضمان.</p>
+      </div>
+      <div>
+        <h4>المتجر</h4>
+        <ul><li><a href="collection.html">كل الساعات</a></li><li><a href="index.html#appt">حجز معاينة</a></li><li><a href="index.html#mag">المجلة</a></li><li><a href="login.html">حسابي</a></li></ul>
+      </div>
+      <div>
+        <h4>المعرض</h4>
+        <ul><li>شارع النيل، المهندسين، الجيزة</li><li>يوميًا 12 ظهرًا – 10 مساءً</li></ul>
+      </div>
+      <div>
+        <h4>تواصل معانا</h4>
+        <ul><li>واتساب: 01X XXXX XXXX</li><li>إنستجرام: @kronos.cairo</li></ul>
+      </div>
+    </div>
+    <div class="foot-note">
+      <span>© 2026 كرونوس — كل الحقوق محفوظة</span>
+      <span>الصور الحالية رسوم توضيحية، وصور المنتجات الفعلية تُضاف قريبًا</span>
+    </div>
+  </div>
+</footer>
+
+<script src="watch.js"></script>
+<script src="app.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var current = new URLSearchParams(location.search).get("watch") || "omega-seamaster";
+  renderCards("#similar", CATALOG.filter(function (p) { return p.id !== current; }).slice(0, 4));
+});
+</script>
+</body>
+</html>
